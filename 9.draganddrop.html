@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <meta charset ="utf-8">
+         <title>
+            Draggable & Droppable
+         </title>
+     <style>
+
+         .bluebox{
+             background-color: #3A5795;
+             color: white;
+             height: 100px;
+             width: auto;
+             margin: 10px;
+         }
+         .yellowbox{
+             background-color: rgb(222, 224, 85);
+             height: 100px;
+             width: auto;
+             margin: 10px;
+         }
+         .greenbox{
+             background-color: #31af37;
+             height: 100px;
+             width: auto;
+             margin: 10px;
+         }
+         .purplebox{
+             background-color: #c058ed;
+             height: 500px;
+             width: auto;
+             margin: 10px;
+         }
+         #great{
+            background-color: #5a3479;
+
+         }
+         
+         p{
+             margin: 0;
+         }
+         
+     </style>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+     
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/sunny/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+     
+ </head>
+
+ <body>
+     <div class="bluebox ui-corner-all" id="facebook">
+     <p>
+        Facebook is <span id="great">great</span>
+     </p>
+     </div>
+     
+     <div class="yellowbox" id="apple">
+         <ul id="list">
+            <li>eggs</li>
+            <li>milk</li>
+            <li>bread</li>
+         </ul>
+         
+         
+     </div>
+     
+     <div class="greenbox" id="microsoft">
+         <p>Microsoft.</p>
+         <p><a href="http://www.google.com" title="google" id="googleLink">Google</a></p>
+
+     </div>
+     
+     <div class="purplebox" id="droppable">
+        <p>You can drop things here:</p>
+     </div>
+
+     
+<!--
+     <br />
+     <p>Enter Your Name: <input></p>
+     <br />
+     <button id="changeFacebook">Corner Class Facebook </button>
+     <br />
+     <br />
+
+     
+     <button id="changeApple">Animate Apple </button>
+     
+     <br />
+     <br />
+     
+     
+     <button id="changeMicrosoft">Change Microsoft Style </button>
+     
+
+     <br />
+-->
+     <br />
+     
+   
+     
+      
+
+     
+ <script>
+     
+     var message = ["please", "leave me alone", "drop me", "come on"];
+     
+     
+     $(function(){
+         
+
+         $("#facebook").draggable();
+         
+         $("#apple").draggable({
+             axis:"y"
+         });
+         
+         $("#microsoft").draggable({
+             revert: true,
+             start: function(){
+                 $("#facebook").css("background-color", "#ce686a");
+             },
+             drag: function(){
+                 $("#microsoft").css("background-color", "rgb(" + Math.floor(256*Math.random()) + "," + Math.floor(256*Math.random()) + "," + Math.floor(256*Math.random()) + ")"
+                                    );
+                 
+                 $("#microsoft").find("p").html(message[Math.floor(4*Math.random())]);
+                 
+             },
+             stop: function(){
+                 $("#apple").css("background-color", "#326dea");
+                 $("#microsoft").html("<p>finally!</p>");
+             },
+          });
+         
+         
+         $("#droppable").droppable({
+          drop: function(event, ui){
+            $(this).css("background-color", "#dc7f0e");
+            $(this).find("p").remove();
+            $("<div></div>").text(ui.draggable.text()).appendTo(this);
+          },
+            
+             accept: "#list li"
+            
+        });
+         
+         $("#list").find("li").draggable({
+             helper: "clone",
+             appendTo: "body"
+         });
+         
+         
+
+    });
+     
+     
+     
+     
+ </script>
+ </body>
+
+
+</html>

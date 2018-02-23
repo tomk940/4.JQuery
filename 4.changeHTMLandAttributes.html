@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <meta charset ="utf-8">
+         <title>
+            change HTML and Attributes
+         </title>
+     <style>
+
+         .bluebox{
+             background-color: #3A5795;
+             color: white;
+             height: 100px;
+             width:auto;
+         }
+         .yellowbox{
+             background-color: rgb(222, 224, 85);
+             height: 100px;
+             width: auto;
+         }
+         .greenbox{
+             background-color: #31af37;
+             height: 100px;
+             width: auto;
+         }
+         #great{
+            background-color: #5a3479;
+
+         }
+     </style>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+ </head>
+
+ <body>
+     <div class="bluebox" id="facebook">
+     <p>
+        Facebook is <span id="great">great</span>
+     </p>
+     </div>
+     
+     <div class="yellowbox" id="apple">
+         <p>Apple.</p>
+     </div>
+     
+     <div class="greenbox" id="microsoft">
+         <p>Microsoft.</p>
+         <p><a href="http://www.google.com" title="google" id="googleLink">Google</a></p>
+         
+         
+
+     </div>
+     
+     <br />
+     <p>Enter Your Name: <input></p>
+     <br />
+     <button id="changeFacebookText">Change Facebook Text</button>
+     <br />
+     <br />
+     
+     <button id="changeAppleText">Change Apple HTML</button>
+     
+     <br />
+     <br />
+     
+     <button id="changeInput">Change Input Value </button>
+     
+     <br />
+     <br />
+     
+     <button id="changeMicrosoftLink">Change Microsoft Link </button>
+     
+
+     
+     
+
+     
+ <script>
+     $(function(){
+
+         $("#changeFacebookText").click(function(){
+             $("#facebook").text("Facebook is Average");
+         });
+         
+         $("#changeAppleText").click(function(){
+             $("#apple").html("<h4>Apple</h4><p>is</p><p>Cool</p>");
+         });
+         
+          $("#changeInput").click(function(){
+             $("input").val("Tom");
+         });
+         
+         $("#changeMicrosoftLink").click(function(){
+             $("#googleLink").attr({"href" : "http://microsoft.com", "title" : "microsoft"});
+         });
+         
+         
+         
+     });
+ </script>
+ </body>
+
+
+</html>

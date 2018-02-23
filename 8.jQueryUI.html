@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <meta charset ="utf-8">
+         <title>
+            JQuery UI
+         </title>
+     <style>
+
+         .bluebox{
+             background-color: #3A5795;
+             color: white;
+             height: 100px;
+             width: auto;
+             margin: 10px;
+         }
+         .yellowbox{
+             background-color: rgb(222, 224, 85);
+             height: 100px;
+             width: auto;
+             margin: 10px;
+         }
+         .greenbox{
+             background-color: #31af37;
+             height: 100px;
+             width: auto;
+             margin: 10px;
+         }
+         #great{
+            background-color: #5a3479;
+
+         }
+         
+         p{
+             margin: 0;
+         }
+         
+     </style>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+     
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/sunny/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+     
+ </head>
+
+ <body>
+     <div class="bluebox ui-corner-all" id="facebook">
+     <p>
+        Facebook is <span id="great">great</span>
+     </p>
+     </div>
+     
+     <div class="yellowbox" id="apple">
+         <p>Apple.</p>
+     </div>
+     
+     <div class="greenbox" id="microsoft">
+         <p>Microsoft.</p>
+         <p><a href="http://www.google.com" title="google" id="googleLink">Google</a></p>
+
+     </div>
+     
+     <div class="ui-state-error" style="height: 100px; margin-top:20px">
+     
+        <p>Error Message</p>
+     </div>
+     
+<!--
+     <br />
+     <p>Enter Your Name: <input></p>
+     <br />
+     <button id="changeFacebook">Corner Class Facebook </button>
+     <br />
+     <br />
+
+     
+     <button id="changeApple">Animate Apple </button>
+     
+     <br />
+     <br />
+     
+     
+     <button id="changeMicrosoft">Change Microsoft Style </button>
+     
+
+     <br />
+-->
+     <br />
+     
+   
+     
+      
+        
+     <p><a href="https://code.jquery.com/ui/" target="iframe_a"> jQuery UI CDN Link</a></p><p><a href="http://jqueryui.com/themeroller/#!zThemeParams=5d00000100e605000000000000003d8888d844329a8dfe02723de3e5701fa198449035fc0613ff729a37dd818cf92b1f6938fefa90282d04ae2cd83e06bf0c861262b13da710abfe407026032aa890032f2d8f9180b38879d8a79e0965ecd80359d2c489cba57116b75e55036db421835ffa3b3d83b6187463838aba00afc21a089a439fb2fd1952297dedf40237f39f44473c134821988f0ae54f1743f475bf73ce8ed011d52765bec963fa45107fb547e669c49f27ac6494e8a3c54d1db295e9ddb0e604db3f49a2852b8de5b71fc01416c24c9c6f183aa79643f98c36fd2a7cf2f04b532a4d89872d1155987551687a021c2ed5fc1ed54fbf9b30f1e173911b570a598b66c048521ea5ec412daf6ac7a9274db489c91b182762c5560f21abad0c197d9628b6ff7f8e1d915063e641b34e1c8643c916d56a6a2e7ee80790d57d6d425544e2cc50ae93c725817c7c2775f5a54e366e75ab80ba7f69f38a8c7317693188e71bc87fce48483901b15bf84aa688d3df3ee88f02099f91414568485df975ee8f4940ae3964c78e4654d50e12adfd3232b6b5fc1bb6edec13fb170a8edf88936073b0d7a08c104aa66274c69fdcadef04d2f9b52ed182ad80a79a97d75eb19200df3c7eb5c677b23518ec7d2146bccee7d0cb263c4aed0fe0004081ca58397244389b941b43e318ad310ab022a9e011926e0b2cba8abb93ecd40a470406a401537d150fa08d8857aed71b4dc40ccfc9935890a4501d2bfef476f9b3" target="iframe_a"> jQuery UI Themes</a></p>
+        <iframe name="iframe_a" width=95% height=800px></iframe>
+
+     
+ <script>
+     $(function(){
+         
+         $("#facebook").draggable();
+
+         
+         
+    });
+     
+     
+     
+     
+ </script>
+ </body>
+
+
+</html>

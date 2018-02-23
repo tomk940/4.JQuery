@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <meta charset ="utf-8">
+         <title>
+            Date Picker
+         </title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+    </script>
+     <style>
+
+         .bluebox{
+             background-color: #3A5795;
+             color: white;
+             height: 100px;
+             width: auto;
+             margin: 10px;
+         }
+         .yellowbox{
+             background-color: rgb(222, 224, 85);
+             height: auto;
+             width: auto;
+             margin: 10px;
+             padding: 10px;
+         }
+         .greenbox{
+             background-color: #31af37;
+             height: auto;
+             width: auto;
+             margin: 10px;
+             padding: 10px;
+         }
+
+         
+         li{
+             margin-bottom: 5px;
+             font-size: 2em;
+             text-align: center;
+             
+         }
+         
+        
+         
+     </style>
+
+     
+ </head>
+
+ <body>
+     
+     <div class="bluebox ui-corner-all" id="facebook">
+         <p>
+            Flight Departure Date: <input  id="departure">
+         </p>
+         <p>
+            Flight Return Date: <input  id="return">
+         </p>
+         
+     </div>
+     
+     <div class="yellowbox ui-corner-all" id="apple">
+         <p>Apple.</p>
+     </div>
+     
+     <div class="greenbox ui-corner-all" id="microsoft">
+         <p>Microsoft</p>
+     </div>
+     
+     <br />
+     
+
+     
+     
+ <script>
+     
+     $(function(){
+        
+         $("#departure").datepicker({
+             showAnim: "slideDown",
+             changeYear: true,
+             numberOfMonths: 1,
+             dateFormat: "dd/mm/yy",
+             showOn: "button",
+             buttonText: "choose your departure date.",
+             minDate: +1,
+             maxDate: "+12M +10D",
+             onClose: function(selectedDate){
+                 $("#return").datepicker("option", "minDate", selectedDate)
+             }
+             
+             
+         });
+         
+         $("#return").datepicker({
+             dateFormat: "dd/mm/yy"
+             
+         });
+         
+         
+         
+                  
+     });
+     
+     
+     
+     
+ </script>
+ </body>
+
+
+</html>

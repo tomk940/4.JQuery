@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <meta charset ="utf-8">
+         <title>
+            Select html elements
+         </title>
+     <style>
+
+         .bluebox{
+             background-color: #3A5795;
+             color: white;
+             height: auto;
+             width:auto;
+         }
+         .yellowbox{
+             background-color: rgb(222, 224, 85);
+             height: auto;
+             width: auto;
+         }
+         .greenbox{
+             background-color: #31af37;
+             height: auto;
+             width: auto;
+         }
+         #great{
+            background-color: #5a3479;
+
+         }
+     </style>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+ </head>
+
+ <body>
+     <div class="bluebox">
+     <p>
+        Facebook is <span id="great">great</span>
+     </p>
+ 
+     <p class="orange">
+        Paragraph2
+     </p>
+     <p>
+        Paragraph3
+     </p>
+     </div>
+     <div class="yellowbox">
+         <p>
+            Apple.
+         </p>
+         <ul>
+             <li>BMW</li>
+             <li>Audi</li>
+             <li>Mercedes</li>
+         </ul>
+
+         <p>
+             <a href="http://www.google.com">
+             This is a link
+             </a>
+         </p>
+         <p>
+             <a href="http://www.microsoft.com">
+             This is another link
+             </a>
+         </p>
+     </div>
+         <p>
+            a paragraph
+         </p>
+     <div class="greenbox">
+     <p>
+        Microsoft.
+     </p>
+
+      <ul>
+         <li>BMW</li>
+         <li>Audi</li>
+         <li>Mercedes</li>
+     </ul>
+         
+     <table>
+     <tr>
+         <th>Phone Make</th>
+         <th>Model</th>
+         <th>Model</th>
+     </tr>
+         
+    <tr>
+         <th>Apple</th>
+         <th>iPhone4</th>
+         <th>16Go</th>
+     </tr>   
+    <tr>
+         <th>Apple</th>
+         <th>iPhone4</th>
+         <th>16Go</th>
+     </tr>
+    <tr>
+         <th>Apple</th>
+         <th>iPhone4</th>
+         <th>16Go</th>
+     </tr>
+    <tr>
+         <th>Apple</th>
+         <th>iPhone4</th>
+         <th>16Go</th>
+     </tr>
+    <tr>
+         <th>Apple</th>
+         <th>iPhone4</th>
+         <th>16Go</th>
+     </tr>
+     </table>
+</div>
+     <p>
+         Type your name:
+         <input id="input"><button type="submit" id="submit">
+         Submit</button>
+     </p>
+
+     
+ <script>
+     $(function(){
+
+//         $("p").click(function(){
+//            $("p").css("background-color", "#e62222"); 
+//         });
+         
+//         $("p").click(function(){
+//            $(this).css("background-color", "#e62222"); 
+//         });
+         
+         $("p").mouseover(function(){
+            $(this).css("background-color", "#e62222"); 
+         });
+         
+         $("p").mouseout(function(){
+            $(this).css("background-color", ""); 
+         });
+         
+         $("input").blur(function(){
+            $(this).css("background-color", "#f5e579");
+         });
+         
+         $("input").keyup(function(){
+            $(this).css("background-color", "#98eadb");
+         });
+         
+         $("#submit").click(function(){
+            $("#input").css("background-color", "#ffffff");
+            $("#input").val("");
+             
+         });
+         
+         
+
+     });
+ </script>
+ </body>
+
+
+</html>

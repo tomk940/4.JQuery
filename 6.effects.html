@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <meta charset ="utf-8">
+         <title>
+            Effects
+         </title>
+     <style>
+
+         .bluebox{
+             background-color: #3A5795;
+             color: white;
+             height: 100px;
+             width: 608px;
+         }
+         .yellowbox{
+             background-color: rgb(222, 224, 85);
+             height: 100px;
+             width: auto;
+         }
+         .greenbox{
+             background-color: #31af37;
+             height: 100px;
+             width: auto;
+         }
+         #great{
+            background-color: #5a3479;
+
+         }
+         
+         p{
+             margin: 0;
+         }
+         
+     </style>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+ </head>
+
+ <body>
+     <div class="bluebox" id="facebook">
+     <p>
+        Facebook is <span id="great">great</span>
+     </p>
+     </div>
+     
+     <div class="yellowbox" id="apple">
+         <p>Apple.</p>
+     </div>
+     
+     <div class="greenbox" id="microsoft">
+         <p>Microsoft.</p>
+         <p><a href="http://www.google.com" title="google" id="googleLink">Google</a></p>
+         
+         
+
+     </div>
+     
+     <br />
+     <p>Enter Your Name: <input></p>
+     <br />
+     <button id="changeFacebook">Fade Out Facebook </button>
+     <br />
+     <br />
+
+     
+     <button id="changeApple">Animate Apple </button>
+     
+     <br />
+     <br />
+     
+     
+     <button id="changeMicrosoft">Change Microsoft Style </button>
+     
+
+
+     
+     
+
+     
+ <script>
+     $(function(){
+          
+         //facebook fade toggle
+         $("#changeFacebook").click(function(){
+             $("#facebook").fadeToggle(2000) 
+         });
+         
+         //Apple animation
+             
+         $("#changeApple").click(function(){
+            $("#apple").animate({
+                width: "200px",
+                height: "200px"
+            }); 
+         });
+             
+             
+          $("#changeMicrosoft").click(function(){
+            $("#microsoft").animate(
+                {width: "200px"}, 1000);
+            $("#microsoft").animate(
+                {height: "300px"}, 1000);
+            $("#microsoft").animate(
+                {width: "400px"}, 1000);
+            $("#microsoft").animate(
+                {height: "500px"}, 1000);
+            $("#microsoft").delay(2000).animate(
+                {width: "608px"}, 1000);
+            $("#microsoft").animate(
+                {height: "100px"}, 1000);
+              
+         });   
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+    });
+     
+     
+     
+     
+ </script>
+ </body>
+
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <meta charset ="utf-8">
+         <title>
+            Ajax
+         </title>
+     <style>
+
+         .bluebox{
+             background-color: #3A5795;
+             color: white;
+             height: 100px;
+             width: 608px;
+         }
+         .yellowbox{
+             background-color: rgb(222, 224, 85);
+             height: 100px;
+             width: auto;
+         }
+         .greenbox{
+             background-color: #31af37;
+             height: 100px;
+             width: auto;
+         }
+         #great{
+            background-color: #5a3479;
+
+         }
+         
+         p{
+             margin: 0;
+         }
+         
+     </style>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+ </head>
+
+ <body>
+     <div class="bluebox" id="facebook">
+     <p>
+        Facebook is <span id="great">great</span>
+     </p>
+     </div>
+     
+     <div class="yellowbox" id="apple">
+         <p>Apple.</p>
+     </div>
+     
+     <div class="greenbox" id="microsoft">
+         <p>Microsoft.</p>
+         <p><a href="http://www.google.com" title="google" id="googleLink">Google</a></p>
+         
+         
+
+     </div>
+     
+     <br />
+     <p>Enter Your Name: <input></p>
+     <br />
+     <button id="changeFacebook">Fade Out Facebook </button>
+     <br />
+     <br />
+
+     
+     <button id="changeApple">Animate Apple </button>
+     
+     <br />
+     <br />
+     
+     
+     <button id="changeMicrosoft">Change Microsoft Style </button>
+     
+
+
+     
+     
+
+     
+ <script>
+     $(function(){
+         
+         
+         $("#facebook").load("ajax/someData.txt");
+         
+         $("#apple").load("ajax/someData.txt #paragragh1");
+         
+         
+         $("#changeMicrosoft").click(function(){
+            $.ajax({ url: "ajax/someData.txt",
+                    success: function(data){
+                    $("#microsoft").html(data);
+                }        
+           }); 
+         });
+         
+         
+         $("#changeApple").click(function(){
+            $.ajax({
+               url : "ajax/someData.txt"
+            }).done(function(data){
+                $("#apple").html(data);
+            });
+         });
+         
+         
+         
+         
+         
+    });
+     
+     
+     
+     
+ </script>
+ </body>
+
+
+</html>

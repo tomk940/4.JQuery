@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <meta charset ="utf-8">
+         <title>
+            Select Menu
+         </title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/ui-darkness/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+    </script>
+     <style>
+
+         .bluebox{
+             background-color: #3A5795;
+             color: white;
+             height: auto;
+             width: auto;
+             margin: 10px;
+             padding: 10px;
+         }
+         .yellowbox{
+             background-color: rgb(222, 224, 85);
+             height: auto;
+             width: auto;
+             margin: 10px;
+             padding: 10px;
+         }
+         .greenbox{
+             background-color: #31af37;
+             height: auto;
+             width: auto;
+             margin: 10px;
+             padding: 10px;
+         }
+         
+         #strength1, #strength2{
+             width: 150px;
+         }
+         
+
+     </style>
+
+     
+ </head>
+
+ <body>
+     
+     <div class="bluebox ui-corner-all" id="facebook">
+         <p>
+            Facebook
+         </p>  
+         <form>
+             <label for="strength1">Select your biggest strength:</label>
+             <select id="strength1" name="strength1">
+                <option>Motivation</option>
+                <option selected="selected">Creativity</option>
+                <option>Curiosity</option>
+                <option>Intergrity</option>
+                <option>Modesty</option>
+             </select>
+        </form>
+     </div>
+     
+     <div class="yellowbox ui-corner-all" id="apple">
+         <p>
+             Apple.
+         </p>
+         
+         <form>
+            <label for="strength2">Select your biggest strength:</label>
+         <select id="strength2" name="strength2">
+             <optgroup label="Group 1">
+                <option>Motivation</option>
+                <option selected="selected">Creativity</option>
+            </optgroup>
+             <optgroup label="Group 2">
+                <option>Curiosity</option>
+                <option>Intergrity</option>
+                <option>Modesty</option>
+            </optgroup>
+         </select>
+         
+         </form>
+     </div>
+     
+     <div class="greenbox ui-corner-all" id="microsoft">
+         <p>
+             Microsoft
+         </p>
+     </div>
+     
+     
+     <br />
+     
+
+     
+     
+ <script>
+     
+     $(function(){
+         
+    
+         $("#strength1").selectmenu();
+         $("#strength2").selectmenu();
+         
+         
+         
+                  
+     });
+     
+     
+     
+     
+ </script>
+ </body>
+
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <meta charset ="utf-8">
+         <title>
+            Change Styling
+         </title>
+     <style>
+
+         .bluebox{
+             background-color: #3A5795;
+             color: white;
+             height: 100px;
+             width: 300px;
+         }
+         .yellowbox{
+             background-color: rgb(222, 224, 85);
+             height: 100px;
+             width: auto;
+         }
+         .greenbox{
+             background-color: #31af37;
+             height: 100px;
+             width: auto;
+         }
+         #great{
+            background-color: #5a3479;
+
+         }
+     </style>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+ </head>
+
+ <body>
+     <div class="bluebox" id="facebook">
+     <p>
+        Facebook is <span id="great">great</span>
+     </p>
+     </div>
+     
+     <div class="yellowbox" id="apple">
+         <p>Apple.</p>
+     </div>
+     
+     <div class="greenbox" id="microsoft">
+         <p>Microsoft.</p>
+         <p><a href="http://www.google.com" title="google" id="googleLink">Google</a></p>
+         
+         
+
+     </div>
+     
+     <br />
+     <p>Enter Your Name: <input></p>
+     <br />
+     <button id="changeFacebook">Change Facebook Style</button>
+     <br />
+     <br />
+     
+     <button id="changeApple">Change Apple Style</button>
+     
+     <br />
+     <br />
+     
+     
+     <button id="changeMicrosoft">Change Microsoft Style </button>
+     
+      <br />
+     <br />
+     
+     
+     <button id="showMicrosoft">Show Microsoft  </button>
+
+     
+     
+
+     
+ <script>
+     $(function(){
+          
+         
+       $("#changeFacebook").click(function(){
+            $("#facebook").css("width", 100 * Math.random() -50 + $("#facebook").width());
+
+           $("#facebook").addClass("greenbox");
+       
+        });
+     
+     
+         $("#changeApple").click(function(){
+             $("#apple").addClass("bluebox");
+         });
+
+
+         $("#apple").click(function(){
+             $("#apple").removeClass("yellowbox");
+             $("#apple").css("height", 50);
+             $("#apple").css("width", 50);
+             $("#apple").css("position", "absolute");
+             $("#apple").css({"top": 200 * Math.random(), "left": 200* Math.random(), "background-color": "rgb(" + Math.floor(256*Math.random()) + "," + Math.floor(256*Math.random()) + "," + Math.floor(256*Math.random()) + ")"
+            });
+         });
+         
+         $("#changeMicrosoft").click(function(){
+            $("#microsoft").toggleClass("greenbox");
+             
+             $("#microsoft").dblclick(function(){
+                 $(this).hide();
+             });
+             
+             
+             
+         });
+         
+         
+         $("#showMicrosoft").click(function(){
+         
+            $("#microsoft").show();
+         });
+         
+         
+         
+         
+         
+    });
+     
+     
+     
+     
+ </script>
+ </body>
+
+
+</html>
